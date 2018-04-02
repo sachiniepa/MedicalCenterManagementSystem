@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="phreport5" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f1e53e6-4da5-4f74-a8ea-1497080d9106">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="eDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="stDate" class="java.sql.Time">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="enDate" class="java.sql.Time">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from orders o, drugs d where $P{eDate} >= dateOfPurchase and  $P{sName}<= dateOfPurchase and d.drugCode = o.drugCode]]>
+	</queryString>
+	<field name="orderCode" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateOfPurchase" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qtyOrdered" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qtyRecieved" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="suppName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateOfExp" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateRecieved" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="enteredBy" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="chName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="drugName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="manufact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mrgLvl" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#001F52" uuid="96df79b4-3759-4cfa-bd65-8a2c3c73281a"/>
+				<staticText>
+					<reportElement x="56" y="2" width="234" height="43" forecolor="#FFFFFF" uuid="20757f7e-c2b4-4ee5-9ee3-48a1e22de1bb"/>
+					<textElement>
+						<font fontName="Rage Italic" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deegayuu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="75" y="31" width="180" height="20" forecolor="#FFFFFF" uuid="f136485a-c5b4-45c1-ba2e-f6228cee17a3"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI Symbol" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[MEDICAL CENTER]]></text>
+				</staticText>
+				<image>
+					<reportElement x="4" y="2" width="52" height="52" uuid="86c840e1-b60b-438e-a618-dfe858bd5d48"/>
+					<imageExpression><![CDATA["C:\\Users\\HP User\\Desktop\\itp\\ITPproject\\src\\images\\icons8_Clinic_52px.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="193" y="58" width="254" height="31" forecolor="#FFFFFF" uuid="3da5587c-4bd7-4737-9b39-db6e4651cf64"/>
+					<textElement>
+						<font fontName="Segoe UI Symbol" size="22" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Recieved Drugs Report]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="da9e9850-91d0-47cc-b438-b83218560051"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="-16" y="0" width="77" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e48fe19b-a4a1-49ee-8ab8-eec7d1f738f6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[orderCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="61" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c3c57d72-3659-43a5-b45c-b20a9387fcea"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[drugCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="122" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="e4e53bde-66fe-4a2f-ad1d-8f029405cfe8"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="183" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="51483143-6d6a-4e19-a55b-b606df864d05"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[suppName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="244" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="638bff6b-b2a4-4d64-8e08-159211b60e03"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[dateOfPurchase]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="305" y="0" width="89" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="31b0ca66-80e6-416b-90da-6b332bd38cce"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[dateRecieved]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="394" y="0" width="59" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f6e8ef33-e594-4ef4-99cd-0bc0be781686"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="453" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="79b30806-649b-4839-b3ab-735ca10fd9bf"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="514" y="0" width="61" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7af2dfeb-b6c9-4135-8bfc-d1784dce8708"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="56cd36de-11f3-43b4-bbb6-2bc4b47881d0"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="-16" y="0" width="77" height="20" uuid="86422324-4b4d-4eb8-904b-21d0ed264c9a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="61" y="0" width="61" height="20" uuid="fc556409-759b-44ca-b476-637c6498938f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="122" y="0" width="61" height="20" uuid="b0d1c5dd-b185-4e77-be0a-e2b28a78be71"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="183" y="0" width="61" height="20" uuid="5fbba703-6888-456b-824e-7d78e33f6a3c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{suppName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="244" y="0" width="61" height="20" uuid="e60a67b9-de04-479a-b2cd-ad3ca5de7537"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateOfPurchase}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="305" y="0" width="61" height="20" uuid="91195678-abe6-47cb-80b5-8bc96f571dff"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateRecieved}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="394" y="0" width="59" height="20" uuid="e5c16cbd-0359-4365-bcc2-d46e53784ab0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtyRecieved}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="453" y="0" width="61" height="20" uuid="80cd2593-cbf8-4c64-a234-19147fea519a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="514" y="0" width="61" height="20" uuid="abbc658e-f7bf-4080-99a2-414934c91721"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="e71d1089-740b-4657-b7bf-95b1bbec33fc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="045200fb-94fb-4f7e-b8c4-d6daf17e076a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="88894d7d-22c8-47e7-8f4e-39a54163b981"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

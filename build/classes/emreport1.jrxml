@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="emreport1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8f0e12d4-c629-463a-a33e-d4e66b3411c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from log]]>
+	</queryString>
+	<field name="userName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="login" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logout" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#001F52" uuid="251cbb7b-357a-4cfe-8505-c04ee7a5e3a2"/>
+				<staticText>
+					<reportElement x="61" y="10" width="234" height="43" forecolor="#FFFFFF" uuid="95af7ba4-d271-44de-a10e-1e07495e40f6"/>
+					<textElement>
+						<font fontName="Rage Italic" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deegayuu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="76" y="39" width="180" height="20" forecolor="#FFFFFF" uuid="3c0aace0-51ba-447a-af07-c99b3214a918"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI Symbol" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[MEDICAL CENTER]]></text>
+				</staticText>
+				<image>
+					<reportElement x="10" y="10" width="52" height="52" uuid="0cc03736-55e6-44ed-a4a7-35cb295e7ae0"/>
+					<imageExpression><![CDATA["C:\\Users\\HP User\\Desktop\\itp\\ITPproject\\src\\images\\icons8_Clinic_52px.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="224" y="49" width="170" height="43" forecolor="#FFFFFF" uuid="04c867d2-29fc-402b-895d-45f9c2c1165e"/>
+					<textElement>
+						<font fontName="Segoe UI Symbol" size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Log Summary]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="09b8f449-c8a3-4a81-a797-18bdc09a9435"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8fe6a097-d919-4564-b66c-bcd4e0c85f4f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[userName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="936f587b-9f39-4773-a69b-ebcd989d54ef"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0085a770-b135-44af-ade4-54c4c5fba56e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[logout]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="765949e5-ed4d-427c-9f65-a8edbe010034"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="185" height="20" uuid="45a9e291-d53f-4103-b280-459199070970"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="185" y="0" width="185" height="20" uuid="b623af69-9e2c-401e-9708-9bb8e833ea2c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{login}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="370" y="0" width="185" height="20" uuid="c4fda898-7d92-4a21-81e3-76abbdd2901a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{logout}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="d109d1b3-79ec-4896-be26-167c8d62a60f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="69a0cc2d-f4d3-45cc-879f-8d8083d4ec32"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="5d0b300b-d283-43b2-9dd1-a3636e2ccfc2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

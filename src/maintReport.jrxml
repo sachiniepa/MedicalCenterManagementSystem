@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a377408d-ab2d-4743-9870-f50e4f633f50">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from paymaintain]]>
+	</queryString>
+	<field name="BiLL" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Equipment_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Product_Cost" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Service_Cost" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_Cost" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="vmaint" class="java.lang.Float" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{Total_Cost}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#001F50" uuid="63b7fdd1-0bb3-4a2d-ba14-7f9c9cdc12c9"/>
+				<staticText>
+					<reportElement x="378" y="39" width="169" height="43" forecolor="#FFFFFF" uuid="b46bc628-f34d-4e92-8dc7-a23578dbf855"/>
+					<textElement>
+						<font fontName="Segoe UI Symbol" size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Maintainance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="61" y="10" width="234" height="43" forecolor="#FFFFFF" uuid="1f13135f-4982-4885-a282-dcb51d922140"/>
+					<textElement>
+						<font fontName="Rage Italic" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deegayuu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="76" y="39" width="180" height="20" forecolor="#FFFFFF" uuid="f5dfa4b3-26da-4e8f-a25e-688d8408e79c"/>
+					<textElement textAlignment="Right">
+						<font fontName="Segoe UI Symbol" size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[MEDICAL CENTER]]></text>
+				</staticText>
+				<image>
+					<reportElement x="10" y="10" width="52" height="52" uuid="eeb56dc5-569b-4085-baa1-588e881360e5"/>
+					<imageExpression><![CDATA["C:\\Users\\HP User\\Desktop\\itp\\ITPproject\\src\\images\\icons8_Clinic_52px.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="497d3717-77a5-4534-8d41-869e6f61bcac"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9ba85847-84db-4042-bd8f-c6fe17b5221f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BiLL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9c431e95-eda5-4e18-9239-2c8d8dee7476"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipment_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4dba9508-1535-466b-bc71-54d5ee7a10f2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product_Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="72a73f7e-135e-433b-855d-140b2fde4f92"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service_Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a927534f-ef9c-44c2-aaa7-16dbd3aa3d85"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total_Cost]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="76">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="6544d3d8-ec29-4137-be6b-e32f8f95053e"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="15ea9eff-e220-43d3-ad99-38c199d0b554"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BiLL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="125" y="0" width="97" height="20" uuid="7822cc03-78d2-4c01-8ed7-5536c95db9fe"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Equipment_No}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="234" y="0" width="99" height="20" uuid="008b0229-4495-4707-8ec1-033768f74e9d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Product_Cost}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="347" y="0" width="97" height="20" uuid="87c1fd24-9963-4fd9-a390-7dea94565648"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Service_Cost}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="460" y="0" width="95" height="20" uuid="f5074597-1a6e-45e3-9194-74743b086a5e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total_Cost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="158">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="145" width="515" height="13" backcolor="#E6E6E6" uuid="e2d606a1-811a-40d6-a0d0-f7ac07184530"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="145" width="40" height="13" backcolor="#E6E6E6" uuid="9623128f-bc22-4d53-8cbe-ca3dbfc28172"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="145" width="100" height="13" uuid="5fffeb09-ddc9-4a18-9421-ed0a04ae37de"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="18" width="95" height="20" uuid="eb1663d9-bcb8-4dd0-83ad-5c26460b41c9"/>
+				<textFieldExpression><![CDATA[$V{vmaint}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="455" y="17" width="100" height="1" uuid="caa1a4d1-be0c-407a-9b62-127846ac1d86"/>
+			</line>
+			<line>
+				<reportElement x="455" y="38" width="100" height="1" uuid="0e4d539d-5603-4721-8f59-399fa78e8e6a"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

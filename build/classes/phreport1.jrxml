@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="phreport1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="450ed256-165f-47fd-b3d8-d9841ad87073">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="sName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[Select * from drugs]]>
+	</queryString>
+	<field name="drugCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="chName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="drugName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="manufact" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="unitPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totQty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#001F52" uuid="6c837d72-8cdc-47fc-bdd3-7bcff122fc28"/>
+				<staticText>
+					<reportElement x="56" y="9" width="268" height="58" forecolor="#FFFFFF" uuid="879db3cf-03fc-4836-b2d7-05864f57a842"/>
+					<textElement>
+						<font fontName="Rage Italic" size="36" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deegayuu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="81" y="39" width="180" height="20" forecolor="#FFFFFF" uuid="a2d93edf-9088-432f-becf-6c47589f906a"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MEDICAL CENTER]]></text>
+				</staticText>
+				<image>
+					<reportElement x="5" y="6" width="52" height="52" uuid="4c45797c-877a-4c6b-829e-3b1849862ea4"/>
+					<imageExpression><![CDATA["C:\\Users\\HP User\\Desktop\\itp\\ITPproject\\src\\images\\icons8_Clinic_52px.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="216" y="63" width="184" height="28" forecolor="#FFFFFF" uuid="1f8cf3b9-79b8-4eae-ab19-54e02c3f4ee3"/>
+					<textElement>
+						<font fontName="Segoe UI Symbol" size="20" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Full Drug Report]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="b2e7aad7-e3c5-4cda-b86c-d171e600a0da"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="-15" y="0" width="52" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fbff9a18-26da-44b9-8a8d-824ea3833230"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="37" y="0" width="117" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0f1de018-3eaf-4fff-935c-424256b1ff72"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chemical Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="154" y="0" width="83" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5d57b238-eef1-480f-809c-038156e6bff9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drug Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3307dd1b-fad4-4948-a6ab-3896b9af3625"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="316" y="0" width="101" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6e6e3c46-5c37-44b6-bf2e-de2e323e33d9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manufacturer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fbfafb6e-3826-41b4-8519-2c8ac89cb938"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="496" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f0f20632-365f-49f3-9f37-71b1fb92d30f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="cb854954-0751-43c8-bf12-f3c9e95b326d"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="-18" y="0" width="55" height="20" uuid="314a59e0-ec15-4587-bc9f-fa5964b44cf8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugCode}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="40" y="0" width="114" height="20" uuid="a212ad24-a0d4-4cf1-93fb-daf186199ee7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="154" y="0" width="83" height="20" uuid="ba73679a-d456-4867-b969-9f46a91cd98f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="237" y="0" width="79" height="20" uuid="2621ce43-3849-4a9a-b873-46d2c0c2af04"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="316" y="0" width="101" height="20" uuid="1e6b5e31-b769-4469-a9a8-1636828edecb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manufact}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="417" y="0" width="79" height="20" uuid="9ba876fe-2571-486b-aad5-02f6ef30713d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="496" y="0" width="79" height="20" uuid="a0af2b51-648f-48ea-b4aa-32331738dd94"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totQty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="eb22b090-a49d-4042-ba64-3b8ad9689a95"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="8ef314d0-bd83-4d3e-bbc3-5f9b9d46a4e5"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="da570852-7181-40f8-9049-19c927c0559e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
